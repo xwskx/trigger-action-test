@@ -6,9 +6,6 @@ on:
 jobs:
   Databricks-Deploy-Actions:
     runs-on: ubuntu-latest
-    env:
-      DATABRICKS_HOST: ${{secrets.DB_HOST}}
-      DATABRICKS_TOKEN: ${{secrets.DB_TOKEN}}
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
