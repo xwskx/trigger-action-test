@@ -2,7 +2,7 @@ name: Databricks Deploy
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   Databricks-Deploy-Actions:
     runs-on: ubuntu-latest
