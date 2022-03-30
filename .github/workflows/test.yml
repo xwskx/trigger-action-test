@@ -12,10 +12,12 @@ jobs:
       - name: test
         uses: xwskx/github-action-test@main
         with:
-          repo_name: ${{ github.repository }}
+          repo_name: ${{ github.event.repository.name }}
           aws_id: 'my id!!!'
           aws_secret: 'my_secret!!!'
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - name: Install Python libaries
         run: find -type f
-      - run: cat ./dbx/project.json
+      - run: cat ./.dbx/project.json
+      - run: cat ./.dbx/lock.json
+      - run: cat ./conf/deployment.json
